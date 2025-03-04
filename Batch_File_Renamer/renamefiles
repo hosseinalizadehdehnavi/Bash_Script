@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Check if input words are provided
+if [ -z "$1" ]; then
+    echo "Usage: $SHELL $0 <word1> <word2> <word3> ..."
+    exit 1
+fi
+
+# Store all input words in an array
+words_to_remove=("$@")
+
+# Loop through all files in the current directory
+for file in *; do
+    # Check if the file exists (to avoid errors if no files match)
+    if [ -e "$file" ]; then
+        new_name="$file"
+        # Remove each input word from the filename
+        for word in "${words_to_remove[@]}"; do
+            new_name="${new_name//$word/}"
+        done
+        # Rename the file if the name has changed
+        if [ "$file" != "$new_name" ]; then
+            mv "$file" "$new_name"
+            echo "Renamed: $file -> $new_name"
+        fi
+    else
+        echo "No files found in the current directory."
+        exit 1
+    fi
+done
+
+echo "All files have been processed."
