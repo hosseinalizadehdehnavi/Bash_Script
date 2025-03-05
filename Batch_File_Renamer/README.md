@@ -7,7 +7,7 @@ This Bash script removes specified words from filenames in the current directory
 Run the script with words you want to remove from filenames as arguments:  
 
 ```bash
-./rename.sh <word1> <word2> <word3> ...
+./renamefiles.sh <word1> <word2> <word3> ...
 ```
 
 ### **Example**  
@@ -20,7 +20,7 @@ test_sample_document.txt  another_test_file.txt  example_sample.txt
 
 #### **Run the Script:**  
 ```bash
-./rename.sh test sample
+./renamefiles.sh test sample
 ```
 
 #### **Output:**  
@@ -47,7 +47,7 @@ _document.txt  another__file.txt  example_.txt
 - Bash shell (`#!/bin/bash`)  
 - Execute permissions:  
   ```bash
-  chmod +x rename.sh
+  chmod +x renamefiles.sh
   ```
 
 ## **Notes**  
