@@ -37,7 +37,7 @@ WEBHOOK="http://your-rocket-chat-url/hooks/your-webhook-id"
 
 ### **4. Run the Script**  
 ```bash
-./monitor_services.sh &
+./service_monitor.sh &
 ```
 
 ## **Example Notification Sent to Rocket.Chat**  
