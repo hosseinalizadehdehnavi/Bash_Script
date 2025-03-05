@@ -15,7 +15,7 @@ check_status() {
     TIME="$(date +"%Y/%m/%d %H:%M:%S")"
     MESSAGE="$TIME - '"$service_name"' service changed from '"$prev_status"' to '"$current_status"'"
 
-    WEBHOOK="http://localhost:3000/hooks/663a1accbbcc52c0188b0096/X63YXmFKbsmC6EDESavANZrRdYKSaeLeM94ag75fyiowgK9K"
+    WEBHOOK="http://your-rocket-chat-url/hooks/your-webhook-id"
 
     # Send message via curl (error suppressed)
     curl -s -o /dev/null -X POST -H 'Content-Type: application/json' -d "{\"text\": \"${MESSAGE}\" }" ${WEBHOOK} 
