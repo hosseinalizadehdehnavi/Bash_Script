@@ -1,0 +1,1 @@
+0 * * * * /opt/devops/Root_Dir_Usage_Cleaner/root_dir_usage_cleaner.sh
